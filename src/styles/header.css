@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.score-board {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.score {
+  text-align: left;
+}
