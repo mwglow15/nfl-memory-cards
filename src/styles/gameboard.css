@@ -1,6 +1,6 @@
 .gameboard {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(10rem, 100%), 1fr));
-  padding: 20px;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  padding: 20px 60px;
+  gap: 30px;
 }

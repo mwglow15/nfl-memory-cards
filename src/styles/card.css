@@ -1,4 +1,12 @@
 .team-card {
-  border: 1px solid black;
-  height: 300px;
+  border-radius: 20px;
+  height: 325px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  width: 100%;
 }

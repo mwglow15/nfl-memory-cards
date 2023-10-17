@@ -37,24 +37,19 @@ export default function GameBoard({ onMove, currentScore }){
     setSelectedTeams(teamIndices)
   },[currentScore])
 
-  // function Cards({teams, selectedTeams}) {
-  //   if(teams.length > 0) {
-  //     selectedTeams.map((index, team) => {
-  //       const teamName = teams[team].team.displayName
-  //       const teamLogo = teams[team].team.logos[0].href
-  //       const key = teams[team].team.uid
-  //       //console.log(index)
-  //       return(//<Card teamName={teamName} imagePath={teamLogo} key={key} onClick={onMove} />)
-  //     })
-  //   }
-  // }
-
   return(
     <div className='gameboard'>
       {
         (selectedTeams.length > 0 &&
         teams.length > 0 &&
-        selectedTeams.map((teamIndex) => <Card teamName={teams[teamIndex].team.displayName} imagePath={teams[teamIndex].team.logos[0].href} onMove={onMove} key={teams[teamIndex].team.uid}/>))
+        selectedTeams.map((teamIndex) => <Card teamName={teams[teamIndex].team.displayName} 
+                                              imagePath={teams[teamIndex].team.logos[0].href}
+                                              onMove={onMove} id={teams[teamIndex].team.uid}
+                                              background={"#" + teams[teamIndex].team.color} 
+                                              key={teams[teamIndex].team.uid}
+                                        />
+        )
+        )
       }
     </div>
   )

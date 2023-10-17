@@ -11,13 +11,15 @@ function App() {
   function handleMove(e) {
     e.preventDefault()
 
-    const teamId = e.target.id
-
+    const teamId = e.currentTarget.dataset.id
+    
+    console.log(moves)
     if(moves.includes(teamId)) {
       if(highScore < currentScore) {
         setHighScore(currentScore)
       }
       setCurrentScore(0)
+      setMoves([])
     }
     else {
       setMoves([...moves, teamId])
